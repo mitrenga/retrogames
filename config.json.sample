@@ -1,0 +1,12 @@
+{
+  "feedback": {
+    "to": "feedback@sample.com"
+  },
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 465,
+    "user": "you@gmail.com",
+    "password": "gmail-app-password",
+    "from": "you@gmail.com"
+  }
+}

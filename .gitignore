@@ -1,0 +1,8 @@
+# local configuration with SMTP credentials — publish config.json.sample instead
+config.json
+
+# editor & OS clutter
+*.swp
+*~
+.DS_Store
+Thumbs.db

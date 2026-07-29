@@ -1,0 +1,713 @@
+/* ==========================================================================
+   RETRO.GAMES — site stylesheet
+   Design language: modern dark minimalism with ZX Spectrum signatures.
+   Signatures: Sinclair rainbow stripe, pixel-font eyebrow labels,
+   tape-loading animated bars, Spectrum-screen accent palette.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces & text */
+  --bg: #0a0b0f;
+  --panel: #12141c;
+  --panel-2: #171a24;
+  --line: #262b3a;
+  --ink: #edf0f6;
+  --muted: #9aa3b5;
+
+  /* ZX Spectrum bright palette, tuned for contrast on dark */
+  --cyan: #38e1e1;
+  --magenta: #f356d4;
+  --yellow: #ffd23f;
+  --green: #46e08a;
+  --orange: #ff9d3b;
+  --red: #ff4a3d;
+
+  /* Sinclair rainbow stripe */
+  --stripe: linear-gradient(
+    90deg,
+    var(--red) 0 25%,
+    var(--yellow) 25% 50%,
+    var(--green) 50% 75%,
+    var(--cyan) 75% 100%
+  );
+
+  /* Type */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", var(--font-body);
+  --font-pixel: "Press Start 2P", "Courier New", monospace;
+
+  /* Fluid type scale */
+  --text-sm: 0.875rem;
+  --text-base: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --text-lg: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+  --text-xl: clamp(1.6rem, 1.3rem + 1.4vw, 2.6rem);
+  --text-hero: clamp(2.4rem, 1.6rem + 4.5vw, 5.5rem);
+
+  --radius: 12px;
+  --container: 72rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  /* Faint dot grid, like a dimmed pixel raster */
+  background-image: radial-gradient(rgba(154, 163, 181, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--ink);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Accessible skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--yellow);
+  color: #000;
+  padding: 0.6rem 1rem;
+  z-index: 100;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Signature elements
+   -------------------------------------------------------------------------- */
+
+/* Sinclair rainbow stripe — use as a thin decorative bar */
+.stripe {
+  display: block;
+  height: 4px;
+  background: var(--stripe);
+  border: 0;
+  margin: 0;
+}
+
+/* Skewed stripe chip, echoing the Spectrum case badge */
+.stripe--badge {
+  width: 3.5rem;
+  height: 0.9rem;
+  transform: skewX(-24deg);
+  border-radius: 2px;
+}
+
+/* Pixel-font micro label above headings */
+.eyebrow {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin: 0 0 1rem;
+}
+
+.eyebrow--yellow { color: var(--yellow); }
+.eyebrow--magenta { color: var(--magenta); }
+.eyebrow--green { color: var(--green); }
+
+/* Tape-loading bar: the animated cassette border of a loading Spectrum */
+.tapeload {
+  height: 8px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--cyan) 0 14px,
+    #103b46 14px 28px
+  );
+  background-size: 56px 100%;
+  animation: tapeload 1.1s linear infinite;
+}
+
+@keyframes tapeload {
+  to { background-position: 56px 0; }
+}
+
+/* --------------------------------------------------------------------------
+   4. Header & navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo .stripe--badge {
+  width: 2.2rem;
+  height: 0.7rem;
+}
+
+.logo em {
+  font-style: normal;
+  color: var(--cyan);
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-image: var(--stripe) 1;
+  border-bottom: 2px solid;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 44rem) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    position: absolute;
+    inset: 100% 0 auto 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem var(--gutter) 1rem;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  padding-block: clamp(4rem, 12vh, 8rem) clamp(3rem, 8vh, 6rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: var(--text-hero);
+  max-width: 14ch;
+  margin-bottom: 0.4em;
+}
+
+.hero h1 .accent {
+  color: var(--cyan);
+}
+
+.hero__lead {
+  font-size: var(--text-lg);
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.hero .tapeload {
+  max-width: 18rem;
+  margin-top: 3.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  border-color: var(--cyan);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: #04252a;
+}
+
+.btn--primary:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: #2b2200;
+}
+
+/* --------------------------------------------------------------------------
+   7. Sections
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: clamp(3rem, 9vh, 6.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.section__head {
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+  max-width: 60ch;
+}
+
+.section__head h2 {
+  font-size: var(--text-xl);
+}
+
+.section__head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Game cards
+   -------------------------------------------------------------------------- */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr));
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Rainbow stripe slides in along the top edge on hover */
+.game-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--stripe);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: #34405a;
+}
+
+.game-card:hover::before {
+  transform: scaleX(1);
+}
+
+.game-card__media {
+  display: block;
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.game-card__media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.game-card__body {
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  flex: 1;
+}
+
+.game-card__body .eyebrow {
+  margin-bottom: 0;
+}
+
+/* Eyebrow colours cycle through six accents by card position */
+.game-grid .game-card:nth-child(6n + 1) .eyebrow { color: var(--cyan); }
+.game-grid .game-card:nth-child(6n + 2) .eyebrow { color: var(--yellow); }
+.game-grid .game-card:nth-child(6n + 3) .eyebrow { color: var(--magenta); }
+.game-grid .game-card:nth-child(6n + 4) .eyebrow { color: var(--green); }
+.game-grid .game-card:nth-child(6n + 5) .eyebrow { color: var(--orange); }
+.game-grid .game-card:nth-child(6n + 6) .eyebrow { color: var(--red); }
+
+.game-card h3 {
+  font-size: var(--text-lg);
+  margin: 0;
+}
+
+.game-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.game-card h3 a:hover {
+  color: var(--cyan);
+}
+
+.game-card__desc {
+  color: var(--muted);
+  margin: 0;
+  flex: 1;
+}
+
+/* Spec sheet: dl rendered as a compact fact strip */
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  margin: 0;
+  padding: 0.9rem 0;
+  border-block: 1px dashed var(--line);
+}
+
+.specs div {
+  display: flex;
+  flex-direction: column;
+}
+
+.specs dt {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.specs dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.game-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. Timeline (About the ZX Spectrum)
+   -------------------------------------------------------------------------- */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: clamp(1.2rem, 3vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline li {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  position: relative;
+}
+
+.timeline h3 {
+  font-size: var(--text-lg);
+  margin: 0 0 0.4rem;
+}
+
+.timeline__era {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.35rem;
+}
+
+.timeline p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   10. Feedback form
+   -------------------------------------------------------------------------- */
+.feedback-form {
+  max-width: 44rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.feedback-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 1.2rem;
+}
+
+.feedback-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font: inherit;
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  transition: border-color 0.15s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+/* honeypot field: visually gone, still present for bots */
+.feedback-form__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.feedback-form__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.feedback-form__status {
+  margin: 0;
+  color: var(--green);
+  font-size: var(--text-sm);
+}
+
+.feedback-form__status.is-error {
+  color: var(--red);
+}
+
+/* --------------------------------------------------------------------------
+   11. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 2.5rem;
+  margin-top: clamp(2rem, 6vh, 4rem);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.site-footer p {
+  margin: 0.2rem 0;
+}
+
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-footer a:hover {
+  color: var(--cyan);
+}
+
+/* --------------------------------------------------------------------------
+   12. Scroll reveal (progressive enhancement, JS adds .reveal)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   13. Motion preferences
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
