@@ -12,7 +12,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Retro Games — Classic ZX Spectrum Games Playable in Your Browser</title>
   <meta name="description" content="Play faithful browser remakes of classic 8-bit games — Manic Miner, Jet Set Willy, Pac-Man, Space Invaders, Boulder Dash and more. No installation, no emulator, free retro gaming from the golden era.">
-  <link rel="canonical" href="https://retrogames.free/">
+  <link rel="canonical" href="<?= htmlspecialchars($webURL) ?>">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Open Graph / social sharing -->
@@ -20,13 +20,13 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   <meta property="og:site_name" content="Retro Games">
   <meta property="og:title" content="Retro Games — Classic ZX Spectrum Games in Your Browser">
   <meta property="og:description" content="Play faithful browser remakes of Manic Miner, Jet Set Willy, Pac-Man, Space Invaders and more. No installation, pure 8-bit nostalgia.">
-  <meta property="og:url" content="https://retrogames.free/">
-  <meta property="og:image" content="https://retrogames.free/images/og-cover.png">
+  <meta property="og:url" content="<?= htmlspecialchars($webURL) ?>">
+  <meta property="og:image" content="<?= htmlspecialchars($webURL) ?>images/og-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Collage of six classic games playable on retrogames.free: Manic Miner, Jet Set Willy, Pac-Man, Space Invaders, Donkey Kong and Boulder Dash">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://retrogames.free/images/og-cover.png">
+  <meta name="twitter:image" content="<?= htmlspecialchars($webURL) ?>images/og-cover.png">
 
   <!-- Fonts (self-hosted, declared in css/style.css) -->
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -41,7 +41,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Retro Games",
-    "url": "https://retrogames.free/",
+    "url": "<?= $webURL ?>",
     "description": "Browser remakes of classic ZX Spectrum games. An unofficial fan project; all rights belong to the original authors.",
     "inLanguage": "en"
   }
@@ -50,140 +50,17 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Playable ZX Spectrum game remakes",
+    "name": "Playable ZX Spectrum and arcade game remakes",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Manic Miner",
-          "url": "https://manicminer.free",
-          "author": { "@type": "Person", "name": "Matthew Smith" },
-          "publisher": { "@type": "Organization", "name": "Bug-Byte" },
-          "datePublished": "1983",
-          "gamePlatform": ["ZX Spectrum", "Web browser"],
-          "genre": "Platform game",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Jet Set Willy",
-          "url": "https://jetsetwilly.free",
-          "author": { "@type": "Person", "name": "Matthew Smith" },
-          "publisher": { "@type": "Organization", "name": "Software Projects" },
-          "datePublished": "1984",
-          "gamePlatform": ["ZX Spectrum", "Web browser"],
-          "genre": "Platform game",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Jetpac",
-          "url": "https://freejetpac.org/",
-          "publisher": { "@type": "Organization", "name": "Ultimate Play the Game" },
-          "datePublished": "1983",
-          "gamePlatform": ["ZX Spectrum", "Web browser"],
-          "genre": "Shooter",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Boulder Dash",
-          "url": "https://boulder-dash.com/bd1/",
-          "author": { "@type": "Person", "name": "Peter Liepa" },
-          "publisher": { "@type": "Organization", "name": "First Star Software" },
-          "datePublished": "1984",
-          "gamePlatform": ["Atari 8-bit", "Web browser"],
-          "genre": "Puzzle action",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Boulder Dash II",
-          "url": "https://boulder-dash.com/bd2/",
-          "publisher": { "@type": "Organization", "name": "First Star Software" },
-          "datePublished": "1985",
-          "gamePlatform": ["Atari 8-bit", "Web browser"],
-          "genre": "Puzzle action",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Space Invaders",
-          "url": "https://freeinvaders.org/",
-          "author": { "@type": "Person", "name": "Tomohiro Nishikado" },
-          "publisher": { "@type": "Organization", "name": "Taito" },
-          "datePublished": "1978",
-          "gamePlatform": ["Arcade", "Web browser"],
-          "genre": "Shooter",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Pac-Man",
-          "url": "https://freepacman.org/",
-          "author": { "@type": "Person", "name": "Toru Iwatani" },
-          "publisher": { "@type": "Organization", "name": "Namco" },
-          "datePublished": "1980",
-          "gamePlatform": ["Arcade", "Web browser"],
-          "genre": "Maze chase",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Asteroids",
-          "url": "https://freeasteroids.org/",
-          "publisher": { "@type": "Organization", "name": "Atari" },
-          "datePublished": "1979",
-          "gamePlatform": ["Arcade", "Web browser"],
-          "genre": "Shooter",
-          "playMode": "SinglePlayer"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "item": {
-          "@type": "VideoGame",
-          "name": "Donkey Kong",
-          "url": "https://freekong.org/",
-          "author": { "@type": "Person", "name": "Shigeru Miyamoto" },
-          "publisher": { "@type": "Organization", "name": "Nintendo" },
-          "datePublished": "1981",
-          "gamePlatform": ["Arcade", "Web browser"],
-          "genre": "Platform game",
-          "playMode": "SinglePlayer"
-        }
-      }
+      { "@type": "ListItem", "position": 1, "name": "Manic Miner", "url": "<?= $webURL ?>manic-miner" },
+      { "@type": "ListItem", "position": 2, "name": "Jet Set Willy", "url": "<?= $webURL ?>jet-set-willy" },
+      { "@type": "ListItem", "position": 3, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
+      { "@type": "ListItem", "position": 4, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
+      { "@type": "ListItem", "position": 5, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
+      { "@type": "ListItem", "position": 6, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
+      { "@type": "ListItem", "position": 7, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
+      { "@type": "ListItem", "position": 8, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
+      { "@type": "ListItem", "position": 9, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
     ]
   }
   </script>
@@ -238,12 +115,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
 
         <div class="game-grid">
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://manicminer.free" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="manic-miner" aria-hidden="true" tabindex="-1">
               <img src="images/manic-miner-cover.png" alt="Manic Miner screenshot: Miner Willy in the Central Cavern with red platforms, keys and the air supply bar" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1983<br>Bug-Byte</p>
-              <h3><a href="https://manicminer.free" rel="external">Manic Miner</a></h3>
+              <h3><a href="manic-miner">Manic Miner</a></h3>
               <p class="game-card__desc">
                 Guide Miner Willy through twenty deadly caverns, collect every flashing
                 item and reach the exit before the air runs out. The game that defined
@@ -262,12 +139,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://jetsetwilly.free" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="jet-set-willy" aria-hidden="true" tabindex="-1">
               <img src="images/jet-set-willy-cover.png" alt="Jet Set Willy screenshot: The Bathroom room of Willy's mansion at 7:00am" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1984<br>Software Projects</p>
-              <h3><a href="https://jetsetwilly.free" rel="external">Jet Set Willy</a></h3>
+              <h3><a href="jet-set-willy">Jet Set Willy</a></h3>
               <p class="game-card__desc">
                 The morning after a wild party, Willy must tidy every room of his sprawling
                 mansion before his housekeeper Maria lets him go to bed. Sixty rooms of
@@ -286,12 +163,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://freejetpac.org/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="jetpac" aria-hidden="true" tabindex="-1">
               <img src="images/jetpac-cover.png" alt="Jetpac screenshot: Jetman assembling his rocket on green platforms while aliens swarm around" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1983<br>Ultimate Play the Game</p>
-              <h3><a href="https://freejetpac.org/" rel="external">Jetpac</a></h3>
+              <h3><a href="jetpac">Jetpac</a></h3>
               <p class="game-card__desc">
                 Rebuild and refuel your rocket while blasting waves of aliens as jetpack-wearing
                 Jetman. The first hit from Ultimate Play the Game — the legendary studio that
@@ -309,12 +186,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://boulder-dash.com/bd1/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="boulder-dash" aria-hidden="true" tabindex="-1">
               <img src="images/boulder-dash-cover.png" alt="Boulder Dash screenshot: classic Commodore 64 title screen by Peter Liepa" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1984<br>First Star Software</p>
-              <h3><a href="https://boulder-dash.com/bd1/" rel="external">Boulder Dash</a></h3>
+              <h3><a href="boulder-dash">Boulder Dash</a></h3>
               <p class="game-card__desc">
                 Dig through caves as Rockford, collect diamonds — and don't get crushed by the
                 boulders your own digging sets loose. Peter Liepa's physics-puzzle masterpiece,
@@ -332,12 +209,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://boulder-dash.com/bd2/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="boulder-dash-2" aria-hidden="true" tabindex="-1">
               <img src="images/boulder-dash-2-cover.png" alt="Boulder Dash II screenshot: title screen with Rockford artwork by First Star Software" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1985<br>First Star Software</p>
-              <h3><a href="https://boulder-dash.com/bd2/" rel="external">Boulder Dash II</a></h3>
+              <h3><a href="boulder-dash-2">Boulder Dash II</a></h3>
               <p class="game-card__desc">
                 Rockford returns in the official sequel: new caves, nastier layouts and even
                 trickier boulder physics. Everything that made the original great, turned up
@@ -355,12 +232,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://freeinvaders.org/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="space-invaders" aria-hidden="true" tabindex="-1">
               <img src="images/space-invaders-cover.png" alt="Space Invaders screenshot: alien formation descending toward shields and the player cannon" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1978<br>Taito</p>
-              <h3><a href="https://freeinvaders.org/" rel="external">Space Invaders</a></h3>
+              <h3><a href="space-invaders">Space Invaders</a></h3>
               <p class="game-card__desc">
                 Tomohiro Nishikado's alien-blasting phenomenon that launched the arcade golden
                 age — so popular it was blamed for a coin shortage in Japan. One cannon,
@@ -378,12 +255,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://freepacman.org/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="pac-man" aria-hidden="true" tabindex="-1">
               <img src="images/pac-man-cover.png" alt="Pac-Man screenshot: Pac-Man eating dots in the blue maze while four ghosts hunt him" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1980<br>Namco</p>
-              <h3><a href="https://freepacman.org/" rel="external">Pac-Man</a></h3>
+              <h3><a href="pac-man">Pac-Man</a></h3>
               <p class="game-card__desc">
                 Toru Iwatani's maze-chase masterpiece and the most recognisable video game
                 character ever made. Gobble every dot and outsmart four ghosts — each with
@@ -401,12 +278,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://freeasteroids.org/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="asteroids" aria-hidden="true" tabindex="-1">
               <img src="images/asteroids-cover.png" alt="Asteroids screenshot: the player's vector ship surrounded by three drifting asteroid outlines" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1979<br>Atari</p>
-              <h3><a href="https://freeasteroids.org/" rel="external">Asteroids</a></h3>
+              <h3><a href="asteroids">Asteroids</a></h3>
               <p class="game-card__desc">
                 Atari's vector-graphics classic: spin, thrust and blast asteroids into
                 ever-smaller shards while flying saucers hunt you down. Pure physics,
@@ -424,12 +301,12 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
           </article>
 
           <article class="game-card" data-reveal>
-            <a class="game-card__media" href="https://freekong.org/" rel="external" aria-hidden="true" tabindex="-1">
+            <a class="game-card__media" href="donkey-kong" aria-hidden="true" tabindex="-1">
               <img src="images/donkey-kong-cover.png" alt="Donkey Kong screenshot: first girder level with Kong and Pauline at the top and Mario below" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1981<br>Nintendo</p>
-              <h3><a href="https://freekong.org/" rel="external">Donkey Kong</a></h3>
+              <h3><a href="donkey-kong">Donkey Kong</a></h3>
               <p class="game-card__desc">
                 Shigeru Miyamoto's barrel-jumping arcade platformer — the game that saved
                 Nintendo's American arcade business and introduced the world to a little

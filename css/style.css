@@ -728,7 +728,55 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   13. Motion preferences
+   13. Game detail pages
+   -------------------------------------------------------------------------- */
+.breadcrumbs {
+  margin: 2.5rem 0 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.breadcrumbs span {
+  margin-inline: 0.35em;
+}
+
+.game-detail__hero {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 800px) {
+  .game-detail__hero {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.game-detail__hero img {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.game-detail__body {
+  max-width: 65ch;
+  margin-bottom: 3rem;
+}
+
+.game-detail__body p {
+  margin-bottom: 1.4em;
+}
+
+.game-detail__footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--line);
+}
+
+/* --------------------------------------------------------------------------
+   14. Motion preferences
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
