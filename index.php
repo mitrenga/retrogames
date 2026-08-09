@@ -21,12 +21,17 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   <meta property="og:title" content="Retro Games — Classic ZX Spectrum Games in Your Browser">
   <meta property="og:description" content="Play faithful browser remakes of Manic Miner, Jet Set Willy, Pac-Man, Space Invaders and more. No installation, pure 8-bit nostalgia.">
   <meta property="og:url" content="https://retrogames.free/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://retrogames.free/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Collage of six classic games playable on retrogames.free: Manic Miner, Jet Set Willy, Pac-Man, Space Invaders, Donkey Kong and Boulder Dash">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://retrogames.free/images/og-cover.png">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Press+Start+2P&display=swap">
+  <!-- Fonts (self-hosted, declared in css/style.css) -->
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="css/style.css">
 
