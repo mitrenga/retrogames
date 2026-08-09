@@ -363,6 +363,15 @@ p {
   transform: translateY(-2px);
 }
 
+.btn--grey {
+  background: #4a5060;
+  border-color: #4a5060;
+}
+
+.btn--grey:hover {
+  background: #5c6375;
+}
+
 .btn--primary {
   background: var(--cyan);
   border-color: var(--cyan);

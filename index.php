@@ -251,6 +251,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
               </dl>
               <div class="game-card__actions">
                 <a class="btn btn--primary" href="https://manicminer.free" rel="external">Play now</a>
+                <a class="btn btn--grey" href="https://manicminer.free/about" rel="external">About</a>
               </div>
             </div>
           </article>
@@ -274,6 +275,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
               </dl>
               <div class="game-card__actions">
                 <a class="btn btn--primary" href="https://jetsetwilly.free" rel="external">Play now</a>
+                <a class="btn btn--grey" href="https://jetsetwilly.free/about" rel="external">About</a>
               </div>
             </div>
           </article>
