@@ -76,7 +76,7 @@ return [
       '<em>Jetpac</em> was the first release from Ultimate Play the Game, the famously secretive Leicestershire studio founded by the Stamper brothers — and it announced them instantly as the best arcade-style developers on the ZX Spectrum. You are Jetman: your rocket lies in pieces across a hostile planet, and you must jet around collecting the stages, stacking them, fuelling up and lifting off, all while alien waves pour in from both sides of the screen.',
       'On a 16K Spectrum, <em>Jetpac</em> moved like nothing else. Big colourful sprites, smooth movement, satisfying laser fire that sprayed asteroids into showers of pixels — it looked and felt like a real arcade machine, which in 1983 was the highest compliment a home computer game could earn. It won a Golden Joystick award and sold in huge numbers.',
       'Ultimate went on to define the Spectrum era with <em>Atic Atac</em>, <em>Sabre Wulf</em> and the isometric <em>Knight Lore</em>, and later transformed into Rare — the studio behind <em>Donkey Kong Country</em> and <em>GoldenEye 007</em>. Jetman himself has been revived several times, but the 1983 original remains a perfect five-minute arcade blast.',
-      'The browser version linked below is a third-party remake at freejetpac.org — a neat piece of JavaScript craftsmanship that fits this catalogue\'s mission: classic games, one click away.',
+      'The browser version linked below is a third-party remake at freejetpac.org, made for web browsers on desktop computers — it fits this catalogue\'s mission perfectly: classic games, one click away. Note that it requires a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
@@ -100,7 +100,7 @@ return [
       'Written by Canadian programmer Peter Liepa with Chris Gray and published by First Star Software in 1984, <em>Boulder Dash</em> put you inside the earth itself. As Rockford, you tunnel through dirt collecting diamonds — but every boulder you undermine obeys the game\'s simple, ruthless physics, and one wrong dig sends it straight down onto your head.',
       'That physics system is the whole genius of the game. The caves are not obstacle courses but puzzles: which diamond to take first, which boulder to release deliberately, how to lure the fireflies and butterflies into a crush that showers you with gems. Add a hard time limit, and every cave becomes a race between careful planning and pure panic.',
       'Born on the Atari 8-bit computers, <em>Boulder Dash</em> spread to virtually every platform of the era and achieved something almost unheard of: a home-computer game so popular it was licensed <em>into</em> the arcades, reversing the usual direction entirely. Its cave-digging DNA lives on in games from <em>Repton</em> to <em>Spelunky</em>.',
-      'The browser version linked below is the official web release at boulder-dash.com, playing faithfully in any modern browser — a perfect fit for this catalogue of one-click retro classics.',
+      'The browser version linked below is the official web release at boulder-dash.com, made for web browsers on desktop computers — a perfect fit for this catalogue of one-click retro classics. It needs a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
@@ -124,7 +124,7 @@ return [
       'A year after the original conquered the 8-bit world, First Star Software sent Rockford back underground. <em>Boulder Dash II</em> keeps the rules that made the first game a classic — dig, collect diamonds, beat the clock, don\'t stand under anything heavy — and rebuilds everything around them: sixteen fresh caves and four bonus intermissions, each designed to punish the instincts you learned in the original.',
       'The sequel is, by common consent, the harder game. Layouts are tighter, diamond quotas crueller, and several caves are built entirely around chain reactions — one deliberate dig setting off an avalanche that must land exactly right. Where the first game taught you the physics, the second one examines you on it.',
       'For anyone who has cleared the original\'s caves from A to P, <em>Boulder Dash II</em> is simply more of one of the best puzzle-action designs ever made — with the safety wheels off. Newcomers may want to start with the first game; veterans should head straight down the mine.',
-      'As with the original, the version linked below is the official browser release at boulder-dash.com — no installation, no emulator, one click and you\'re digging.',
+      'As with the original, the version linked below is the official browser release at boulder-dash.com, made for web browsers on desktop computers — no installation, one click and you\'re digging. It needs a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
@@ -148,7 +148,7 @@ return [
       'Tomohiro Nishikado spent over a year building <em>Space Invaders</em> for Taito in 1978 — designing not just the game but much of the hardware it ran on. The result was a phenomenon with few equals in entertainment history: arcades in Japan filled with queues, dedicated <em>Space Invaders</em> halls opened, and the game earned billions of coins worldwide. The story that it caused a shortage of 100-yen pieces in Japan may be embellished, but the fact people believed it tells you everything.',
       'The design is elemental: fifty-five invaders shuffle across the screen and step down, you slide beneath them with a single cannon and four crumbling shields. Its most famous feature was an accident — as you shoot invaders, the hardware has fewer sprites to draw, so the survivors speed up. Nishikado kept the bug, and video games discovered the difficulty curve.',
       '<em>Space Invaders</em> introduced ideas we now take for granted: the high score, waves that continue until you die, a hostile army with a personality. It launched the golden age of the arcade, inspired <em>Galaxian</em> and <em>Galaga</em>, and its pixel alien remains the unofficial logo of video games themselves.',
-      'The browser version linked below is a third-party JavaScript remake at freeinvaders.org — the full arcade experience, one click away, no coins required.',
+      'The browser version linked below is a third-party remake at freeinvaders.org, made for web browsers on desktop computers — the full arcade experience, one click away, no coins required. It needs a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
@@ -172,7 +172,7 @@ return [
       'In 1980, Namco designer Toru Iwatani set out to make an arcade game that wasn\'t about shooting — something colourful and friendly that would welcome players the space war games ignored, women especially. Legend says the hero\'s shape came to him over a pizza with a slice missing. Whatever the truth, <em>Pac-Man</em> became the most recognisable character video games have ever produced.',
       'The genius hides in the ghosts. Blinky, Pinky, Inky and Clyde look interchangeable, but each follows its own targeting logic — one chases you directly, one aims ahead of you, one ambushes, one wanders. Learning to read the four minds hunting you turns a simple maze into a game of prediction, and mastering it produced the patterns that players still memorise today.',
       'With power pellets that flip the hunt for a few glorious seconds, fruit bonuses and the famous kill screen at level 256, <em>Pac-Man</em> earned more than any coin-operated game before it and dragged video games into mainstream culture: merchandise, a hit single, a Saturday-morning cartoon. Ms. Pac-Man and countless sequels followed, but the 1980 original is still the purest chase in gaming.',
-      'The browser version linked below is a third-party JavaScript remake at freepacman.org — the classic maze, the four ghosts, one click away.',
+      'The browser version linked below is a third-party remake at freepacman.org, made for web browsers on desktop computers — the classic maze, the four ghosts, one click away. It needs a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
@@ -196,7 +196,7 @@ return [
       'Conceived by Lyle Rains and programmed by Ed Logg, <em>Asteroids</em> arrived in 1979 drawn not with pixels but with light: a vector monitor traced its ships and rocks as glowing lines on black, sharper than anything raster hardware could manage. It became Atari\'s best-selling coin-op arcade game, and cabinets had to be fitted with larger coin boxes to hold the takings.',
       'The game gives you a triangle, a rockfield and Newtonian physics. Your ship keeps drifting the way you last thrust, so every burst of speed is a debt you must pay when you need to stop. Shooting a large asteroid splits it into medium ones, then small fast ones — meaning every shot you fire makes the screen more dangerous, not less.',
       'Add the flying saucers — especially the small one that aims with lethal accuracy — and the last-resort hyperspace button that teleports you somewhere possibly worse, and you have one of the purest risk-reward loops ever designed. <em>Asteroids</em> rewards restraint and cold nerves; panic, and your own momentum finishes you off.',
-      'The browser version linked below is a third-party JavaScript remake at freeasteroids.org — vector cool, drifting menace, one click away.',
+      'The browser version linked below is a third-party remake at freeasteroids.org, made for web browsers on desktop computers — vector cool, drifting menace, one click away. It needs a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
@@ -220,7 +220,7 @@ return [
       'In 1981 Nintendo\'s American arcade business was in trouble, sitting on thousands of unsold <em>Radar Scope</em> cabinets. The rescue job went to a young designer named Shigeru Miyamoto, who filled those cabinets with something entirely new: a giant ape, a kidnapped woman named Pauline, and a small jumping hero the American staff nicknamed after their landlord — Mario.',
       '<em>Donkey Kong</em> is often called the first true platform game, and its opening screen remains one of the most famous images in the medium: slanted girders, rolling barrels, and a climb that looks simple until you try it. Four screens — girders, cement factory, elevators, rivets — cycle with rising speed, demanding timing that borders on choreography.',
       'It was also one of the first games to tell a story on screen, complete with an intro, cutscenes and a finale where the ape finally falls. The cabinet saved Nintendo\'s arcade business, triggered a famous lawsuit from Universal (which Nintendo won), and launched the most successful character franchise in video game history. Not bad for a repurposed cabinet.',
-      'The browser version linked below is a third-party JavaScript remake at freekong.org — girders, barrels and all, one click away.',
+      'The browser version linked below is a third-party remake at freekong.org, made for web browsers on desktop computers — girders, barrels and all, one click away. It needs a keyboard, so it cannot be played on phones or tablets.',
     ],
   ],
 
