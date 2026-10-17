@@ -11,7 +11,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Retro Games — Classic ZX Spectrum Games Playable in Your Browser</title>
-  <meta name="description" content="Play faithful browser remakes of classic 8-bit games — Manic Miner, Jet Set Willy, Pac-Man, Space Invaders, Boulder Dash and more. No installation, no emulator, free retro gaming from the golden era.">
+  <meta name="description" content="Play faithful browser remakes of classic games — Manic Miner, Jet Set Willy, Pac-Man, Space Invaders, Boulder Dash and more. No installation, no emulator, free retro gaming from the golden era.">
   <link rel="canonical" href="<?= htmlspecialchars($webURL) ?>">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
@@ -19,7 +19,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Retro Games">
   <meta property="og:title" content="Retro Games — Classic ZX Spectrum Games in Your Browser">
-  <meta property="og:description" content="Play faithful browser remakes of Manic Miner, Jet Set Willy, Pac-Man, Space Invaders and more. No installation, pure 8-bit nostalgia.">
+  <meta property="og:description" content="Play faithful browser remakes of Manic Miner, Jet Set Willy, Pac-Man, Space Invaders and more. No installation, pure retro nostalgia.">
   <meta property="og:url" content="<?= htmlspecialchars($webURL) ?>">
   <meta property="og:image" content="<?= htmlspecialchars($webURL) ?>images/og-cover.png">
   <meta property="og:image:width" content="1200">
@@ -88,11 +88,11 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
   <main id="main">
     <!-- ================= Hero ================= -->
     <section class="hero container">
-      <p class="eyebrow">Arcade · ZX Spectrum · 8-bit classics</p>
-      <h1>Classic 8-bit games, <span class="accent">playable in your browser</span>.</h1>
+      <p class="eyebrow">Arcade · ZX Spectrum · Retro classics</p>
+      <h1>Classic retro games, <span class="accent">playable in your browser</span>.</h1>
       <p class="hero__lead">
-        Faithful remakes of legendary games from the golden age of arcades and 8-bit
-        home computing — ZX Spectrum, Atari, Commodore and more. No installation,
+        Faithful remakes of legendary games from the golden age of arcades and home
+        computing — ZX Spectrum, Atari, Commodore and more. No installation,
         just press play.
       </p>
       <div class="hero__actions">
@@ -108,7 +108,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
         <header class="section__head" data-reveal>
           <p class="eyebrow eyebrow--yellow">01 — Pick a game</p>
           <h2>The games</h2>
-          <p>Legendary games of the 8-bit era — from Matthew Smith's ZX Spectrum
+          <p>Legendary retro games — from Matthew Smith's ZX Spectrum
              platformers to the arcade icons of Taito, Namco, Atari and Nintendo —
              all playable for free in any modern browser.</p>
         </header>

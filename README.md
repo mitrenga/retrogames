@@ -1,6 +1,6 @@
 # retrogames.free
 
-A small portal for classic 8-bit games playable in the browser — from Matthew Smith's
+A small portal for classic retro games playable in the browser — from Matthew Smith's
 ZX Spectrum platformers to the arcade icons of Taito, Namco, Atari and Nintendo.
 Live at **https://retrogames.free**.
 
