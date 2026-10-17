@@ -56,6 +56,30 @@ return [
     ],
   ],
 
+  'booty' => [
+    'name'         => 'Booty',
+    'title'        => 'Booty — Play the ZX Spectrum Pirate Classic Free in Your Browser',
+    'description'  => 'Play Booty online for free: our faithful browser remake of John F. Cain\'s 1984 ZX Spectrum platformer. Twenty holds of a pirate galleon, numbered keys and booby-trapped treasure, no installation.',
+    'year'         => '1984',
+    'publisher'    => 'Firebird',
+    'author'       => 'John F. Cain',
+    'genre'        => 'Platform game',
+    'platform'     => ['ZX Spectrum', 'Web browser'],
+    'original'     => 'ZX Spectrum',
+    'playUrl'      => 'https://booty.remake.free',
+    'aboutUrl'     => 'https://booty.remake.free/about',
+    'own'          => true,
+    'cover'        => 'booty-cover.png',
+    'coverAlt'     => 'Booty screenshot: Jim the cabin boy in a hold of the Black Galleon with numbered doors, keys, ladders and treasure',
+    'lead'         => 'Jim the cabin boy must plunder all twenty holds of the Black Galleon — every door opens only to the key with its number. John F. Cain\'s pirate puzzle-platformer, faithfully remade for your browser.',
+    'body'         => [
+      'Aboard the Black Galleon, a pirate ship of twenty holds, Jim the cabin boy has one job: collect every piece of booty strewn below decks. Each hold is a single screen of decks, ladders and numbered doors, and Jim can carry just one key at a time — the one that opens the door with the same number. Released by Firebird in 1984 at a budget price, <em>Booty</em> was written by John F. Cain for the 48K ZX Spectrum.',
+      'That one-key rule turns the ship into a puzzle with an order to it: which key to take, which door to open, which hold to visit next. Meanwhile ghost pirates patrol the decks, the Captain\'s parrots and the ship\'s rats are out for blood, trap doors drop you into the sea — and some of the treasure is booby-trapped, so step lively.',
+      'Clear the whole ship and you get forty-five seconds to find the Bronze key to the next pile of booty; then come the Silver and the Gold keys, each run faster and more dangerous than the last. The instructions call the third round impossible — and all the while the game\'s tune keeps playing under the action.',
+      'The version you can play here is our own remake, built on the same custom svision engine as our <em>Manic Miner</em> and <em>Jet Set Willy</em>. Its graphics and rules are taken out of the original program, not redrawn, and it runs in any modern browser — no emulator, no installation. See the game\'s About page for the full story of the remake.',
+    ],
+  ],
+
   'jetpac' => [
     'name'         => 'Jetpac',
     'title'        => 'Jetpac — Play Ultimate\'s ZX Spectrum Shooter Free in Your Browser',

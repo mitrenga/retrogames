@@ -54,13 +54,14 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Manic Miner", "url": "<?= $webURL ?>manic-miner" },
       { "@type": "ListItem", "position": 2, "name": "Jet Set Willy", "url": "<?= $webURL ?>jet-set-willy" },
-      { "@type": "ListItem", "position": 3, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
-      { "@type": "ListItem", "position": 4, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
-      { "@type": "ListItem", "position": 5, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
-      { "@type": "ListItem", "position": 6, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
-      { "@type": "ListItem", "position": 7, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
-      { "@type": "ListItem", "position": 8, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
-      { "@type": "ListItem", "position": 9, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
+      { "@type": "ListItem", "position": 3, "name": "Booty", "url": "<?= $webURL ?>booty" },
+      { "@type": "ListItem", "position": 4, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
+      { "@type": "ListItem", "position": 5, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
+      { "@type": "ListItem", "position": 6, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
+      { "@type": "ListItem", "position": 7, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
+      { "@type": "ListItem", "position": 8, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
+      { "@type": "ListItem", "position": 9, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
+      { "@type": "ListItem", "position": 10, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
     ]
   }
   </script>
@@ -158,6 +159,30 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
               <div class="game-card__actions">
                 <a class="btn btn--primary" href="https://jetsetwilly.remake.free" rel="external">Play now</a>
                 <a class="btn btn--grey" href="https://jetsetwilly.remake.free/about" rel="external">About</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal>
+            <a class="game-card__media" href="booty" aria-hidden="true" tabindex="-1">
+              <img src="images/booty-cover.png" alt="Booty screenshot: Jim the cabin boy in a hold of the Black Galleon with numbered doors, keys, ladders and treasure" width="800" height="500" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <p class="eyebrow">1984<br>Firebird</p>
+              <h3><a href="booty">Booty</a></h3>
+              <p class="game-card__desc">
+                Plunder all twenty holds of the Black Galleon as Jim the cabin boy — but each
+                numbered door opens only to its own key, and some of the treasure is
+                booby-trapped. Mind the pirates, parrots and rats.
+              </p>
+              <dl class="specs">
+                <div><dt>Year</dt><dd>1984</dd></div>
+                <div><dt>Genre</dt><dd>Platformer</dd></div>
+                <div><dt>Original</dt><dd>ZX Spectrum</dd></div>
+              </dl>
+              <div class="game-card__actions">
+                <a class="btn btn--primary" href="https://booty.remake.free" rel="external">Play now</a>
+                <a class="btn btn--grey" href="https://booty.remake.free/about" rel="external">About</a>
               </div>
             </div>
           </article>
