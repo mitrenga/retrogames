@@ -110,11 +110,11 @@ $jsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT
 
         <div class="game-detail__hero">
           <div class="game-detail__intro">
-            <p class="eyebrow"><?= htmlspecialchars($g['year']) ?> · <?= htmlspecialchars($g['publisher']) ?></p>
+            <p class="eyebrow"><?= htmlspecialchars($g['year']) ?> · <?= htmlspecialchars($g['maker']) ?></p>
             <h1><?= htmlspecialchars($g['name']) ?></h1>
             <p class="hero__lead"><?= htmlspecialchars($g['lead']) ?></p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="<?= htmlspecialchars($g['playUrl']) ?>" rel="external">Play now — it's free</a>
+              <a class="btn btn--primary" href="<?= htmlspecialchars($g['playUrl']) ?>" rel="external">Play now</a>
               <?php if ($g['aboutUrl']): ?>
               <a class="btn btn--grey" href="<?= htmlspecialchars($g['aboutUrl']) ?>" rel="external">About this remake</a>
               <?php endif; ?>

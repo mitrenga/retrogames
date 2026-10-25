@@ -55,13 +55,14 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
       { "@type": "ListItem", "position": 1, "name": "Manic Miner", "url": "<?= $webURL ?>manic-miner" },
       { "@type": "ListItem", "position": 2, "name": "Jet Set Willy", "url": "<?= $webURL ?>jet-set-willy" },
       { "@type": "ListItem", "position": 3, "name": "Booty", "url": "<?= $webURL ?>booty" },
-      { "@type": "ListItem", "position": 4, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
-      { "@type": "ListItem", "position": 5, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
-      { "@type": "ListItem", "position": 6, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
-      { "@type": "ListItem", "position": 7, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
-      { "@type": "ListItem", "position": 8, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
-      { "@type": "ListItem", "position": 9, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
-      { "@type": "ListItem", "position": 10, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
+      { "@type": "ListItem", "position": 4, "name": "R-Type", "url": "<?= $webURL ?>r-type" },
+      { "@type": "ListItem", "position": 5, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
+      { "@type": "ListItem", "position": 6, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
+      { "@type": "ListItem", "position": 7, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
+      { "@type": "ListItem", "position": 8, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
+      { "@type": "ListItem", "position": 9, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
+      { "@type": "ListItem", "position": 10, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
+      { "@type": "ListItem", "position": 11, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
     ]
   }
   </script>
@@ -120,7 +121,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
               <img src="images/manic-miner-cover.png" alt="Manic Miner screenshot: Miner Willy in the Central Cavern with red platforms, keys and the air supply bar" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
-              <p class="eyebrow">1983<br>Bug-Byte</p>
+              <p class="eyebrow">1983<br>Software Projects</p>
               <h3><a href="manic-miner">Manic Miner</a></h3>
               <p class="game-card__desc">
                 Guide Miner Willy through twenty deadly caverns, collect every flashing
@@ -183,6 +184,30 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
               <div class="game-card__actions">
                 <a class="btn btn--primary" href="https://booty.remake.free" rel="external">Play now</a>
                 <a class="btn btn--grey" href="https://booty.remake.free/about" rel="external">About</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal>
+            <a class="game-card__media" href="r-type" aria-hidden="true" tabindex="-1">
+              <img src="images/r-type-cover.png" alt="R-Type screenshot: the R-9 fighter flying over the metallic terrain of the first level as a wave of red enemy fighters sweeps in" width="800" height="500" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <p class="eyebrow">1988<br>Electric Dreams</p>
+              <h3><a href="r-type">R-Type</a></h3>
+              <p class="game-card__desc">
+                Fly the R-9 fighter through eight levels of the Bydo Empire with the detachable
+                Force pod and the charged beam, against waves of enemies and bosses that fill
+                the screen. The Commodore 64 conversion of Irem's arcade classic.
+              </p>
+              <dl class="specs">
+                <div><dt>Year</dt><dd>1988</dd></div>
+                <div><dt>Genre</dt><dd>Shooter</dd></div>
+                <div><dt>Original</dt><dd>Commodore 64</dd></div>
+              </dl>
+              <div class="game-card__actions">
+                <a class="btn btn--primary" href="https://r-type.remake.free" rel="external">Play now</a>
+                <a class="btn btn--grey" href="https://r-type.remake.free/about" rel="external">About</a>
               </div>
             </div>
           </article>
