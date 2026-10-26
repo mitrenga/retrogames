@@ -7,3 +7,6 @@ config.json
 .DS_Store
 Thumbs.db
 CHAT.md
+
+# private statistics page — symlink to ~/sw/stats (own repository)
+/stats.php
