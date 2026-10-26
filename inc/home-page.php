@@ -1,8 +1,11 @@
 <?php
 // Signed timestamp for the feedback form's time-trap: submissions arriving
 // faster than a human could type are rejected by sendFeedback.php.
-$cfgForTs = json_decode((string)@file_get_contents(__DIR__ . '/config.json'), true) ?: [];
-$tsKey = ($cfgForTs['smtp']['password'] ?? '') . __DIR__;
+// The key must be built exactly as in sendFeedback.php (which lives in the
+// site root, one level above this include), otherwise every submission is
+// taken for a forged token and silently dropped.
+$cfgForTs = json_decode((string)@file_get_contents(dirname(__DIR__) . '/config.json'), true) ?: [];
+$tsKey = ($cfgForTs['smtp']['password'] ?? '') . dirname(__DIR__);
 $tsNow = time();
 $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
 ?><!DOCTYPE html>
