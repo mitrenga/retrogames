@@ -8,9 +8,17 @@
  *   /              -> index.php?               -> home page
  *   /manic-miner   -> index.php?manic-miner    -> game detail page
  *   /anything-else -> index.php?anything-else  -> 404
+ *
+ * Tracking parameters appended by social networks and similar
+ * (?fbclid=..., ?utm_source=...) are key=value pairs; they are not part of
+ * the page path and are ignored. A game page with such a parameter is
+ * redirected to its canonical URL.
  */
 
 $query = rawurldecode($_SERVER['QUERY_STRING'] ?? '');
+$parts = explode('&', $query);
+$query = (strpos($parts[0], '=') === false) ? $parts[0] : '';
+$extra = (count($parts) > 1 || $query === '') && $_SERVER['QUERY_STRING'] !== '';
 $path  = trim($query, '/');
 
 // Base URL of the deployment, svision-style: derived from the request so the
@@ -27,8 +35,9 @@ if ($path === '') {
   require __DIR__ . '/inc/home-page.php';
 }
 elseif (isset($games[$path])) {
-  if ($query !== $path) {
-    // Canonicalize /manic-miner/ -> /manic-miner so each page has one URL.
+  if ($query !== $path || $extra) {
+    // Canonicalize /manic-miner/ and /manic-miner?fbclid=... -> /manic-miner
+    // so each page has one URL.
     header('Location: ' . $basePath . $path, true, 301);
     exit;
   }
