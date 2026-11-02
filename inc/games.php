@@ -83,6 +83,31 @@ return [
     ],
   ],
 
+  'bobby-bearing' => [
+    'name'         => 'Bobby Bearing',
+    'title'        => 'Bobby Bearing — Play the ZX Spectrum Isometric Classic Free in Your Browser',
+    'description'  => 'Play Bobby Bearing online for free: our faithful browser remake of The Edge\'s 1986 ZX Spectrum isometric puzzle game. Roll a ball bearing over 245 curved rooms, rescue your brothers, no installation.',
+    'year'         => '1986',
+    'publisher'    => 'The Edge',
+    'maker'        => 'The Edge',
+    'author'       => 'Robert and Trevor Figgins',
+    'genre'        => 'Isometric arcade adventure',
+    'platform'     => ['ZX Spectrum', 'Web browser'],
+    'original'     => 'ZX Spectrum',
+    'playUrl'      => 'https://bobbybearing.remake.free',
+    'aboutUrl'     => 'https://bobbybearing.remake.free/about',
+    'own'          => true,
+    'cover'        => 'bobby-bearing-cover.png',
+    'coverAlt'     => 'Bobby Bearing screenshot: Bobby the smiling ball bearing rolling across an isometric yellow room of cubes and slopes while an evil Bearing lurks above, with the clock and the name of the lost brother Barnaby on the panel',
+    'lead'         => 'Roll Bobby, a ball bearing with a smile, through 245 isometric rooms of slopes, ramps and curved surfaces to find his lost brothers and push them home before the clock runs out — The Edge\'s 1986 ZX Spectrum classic, faithfully remade for your browser.',
+    'body'         => [
+      '<em>Bobby Bearing</em> came out in 1986 from The Edge, written by the brothers Robert and Trevor Figgins. At first glance it is another isometric game in the <em>Knight Lore</em> mould, but the hero is a ball bearing, and that changes everything: Bobby does not walk, he rolls. The Figginses called their engine <em>Curvispace 3D</em>, and the world is built from slopes, ramps and curved surfaces that the ball really rolls over, gathering speed downhill and drifting off ledges like a pinball.',
+      'Bobby\'s brothers have been stunned by the evil Bearings and lie scattered across the Metaplanes. You have to find each one, nudge him along with your own ball and push him all the way home — and steering a passive ball across a curved landscape is far harder than steering yourself. In the way are lifts that double as crushers, magnets, air vents that lift and blow balls around, blocks that come and go, and the evil Bearings themselves, rolling with exactly the same physics as you.',
+      'There are no lives. The only resource is time: the clock on the panel counts down from the start, and every time you get into trouble it speeds up. Get stuck and you can reset the room — at a cost in time. The 245 rooms were drawn in a single colour per screen in the classic ZX Spectrum style, and the game was praised in its day for the smoothness of its physics on a 3.5 MHz machine.',
+      'The version you can play here is our own remake, built on the same custom svision engine as our other browser remakes of ZX Spectrum games, and it runs in any modern browser — no emulator, no installation. See the game\'s About page for the full story of the remake.',
+    ],
+  ],
+
   'r-type' => [
     'name'         => 'R-Type',
     'title'        => 'R-Type — Play the Commodore 64 Shooter Free in Your Browser',

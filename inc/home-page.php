@@ -58,14 +58,15 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
       { "@type": "ListItem", "position": 1, "name": "Manic Miner", "url": "<?= $webURL ?>manic-miner" },
       { "@type": "ListItem", "position": 2, "name": "Jet Set Willy", "url": "<?= $webURL ?>jet-set-willy" },
       { "@type": "ListItem", "position": 3, "name": "Booty", "url": "<?= $webURL ?>booty" },
-      { "@type": "ListItem", "position": 4, "name": "R-Type", "url": "<?= $webURL ?>r-type" },
-      { "@type": "ListItem", "position": 5, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
-      { "@type": "ListItem", "position": 6, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
-      { "@type": "ListItem", "position": 7, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
-      { "@type": "ListItem", "position": 8, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
-      { "@type": "ListItem", "position": 9, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
-      { "@type": "ListItem", "position": 10, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
-      { "@type": "ListItem", "position": 11, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
+      { "@type": "ListItem", "position": 4, "name": "Bobby Bearing", "url": "<?= $webURL ?>bobby-bearing" },
+      { "@type": "ListItem", "position": 5, "name": "R-Type", "url": "<?= $webURL ?>r-type" },
+      { "@type": "ListItem", "position": 6, "name": "Jetpac", "url": "<?= $webURL ?>jetpac" },
+      { "@type": "ListItem", "position": 7, "name": "Boulder Dash", "url": "<?= $webURL ?>boulder-dash" },
+      { "@type": "ListItem", "position": 8, "name": "Boulder Dash II", "url": "<?= $webURL ?>boulder-dash-2" },
+      { "@type": "ListItem", "position": 9, "name": "Space Invaders", "url": "<?= $webURL ?>space-invaders" },
+      { "@type": "ListItem", "position": 10, "name": "Pac-Man", "url": "<?= $webURL ?>pac-man" },
+      { "@type": "ListItem", "position": 11, "name": "Asteroids", "url": "<?= $webURL ?>asteroids" },
+      { "@type": "ListItem", "position": 12, "name": "Donkey Kong", "url": "<?= $webURL ?>donkey-kong" }
     ]
   }
   </script>
@@ -187,6 +188,30 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
               <div class="game-card__actions">
                 <a class="btn btn--primary" href="https://booty.remake.free" rel="external">Play now</a>
                 <a class="btn btn--grey" href="https://booty.remake.free/about" rel="external">About</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal>
+            <a class="game-card__media" href="bobby-bearing" aria-hidden="true" tabindex="-1">
+              <img src="images/bobby-bearing-cover.png" alt="Bobby Bearing screenshot: Bobby the smiling ball bearing rolling across an isometric yellow room of cubes and slopes while an evil Bearing lurks above, with the clock and the name of the lost brother Barnaby on the panel" width="800" height="500" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <p class="eyebrow">1986<br>The Edge</p>
+              <h3><a href="bobby-bearing">Bobby Bearing</a></h3>
+              <p class="game-card__desc">
+                Roll a ball bearing through 245 isometric rooms of slopes, ramps and curved
+                surfaces, find your stunned brothers and push them home before the clock
+                runs out. The Edge's rolling classic with its Curvispace 3D physics.
+              </p>
+              <dl class="specs">
+                <div><dt>Year</dt><dd>1986</dd></div>
+                <div><dt>Genre</dt><dd>Arcade adventure</dd></div>
+                <div><dt>Original</dt><dd>ZX Spectrum</dd></div>
+              </dl>
+              <div class="game-card__actions">
+                <a class="btn btn--primary" href="https://bobbybearing.remake.free" rel="external">Play now</a>
+                <a class="btn btn--grey" href="https://bobbybearing.remake.free/about" rel="external">About</a>
               </div>
             </div>
           </article>
