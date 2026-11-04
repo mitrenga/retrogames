@@ -242,7 +242,7 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
 
           <article class="game-card" data-reveal>
             <a class="game-card__media" href="jetpac" aria-hidden="true" tabindex="-1">
-              <img src="images/jetpac-cover.png" alt="Jetpac screenshot: Jetman assembling his rocket on green platforms while aliens swarm around" width="800" height="500" loading="lazy">
+              <img src="images/jetpac-cover.png" alt="Jetpac screenshot: Jetman dropping back towards the base of his rocket and spraying laser fire across the screen as a trio of fuzzy aliens closes in on him, with the other two rocket pieces waiting on the green ledges above" width="800" height="500" loading="lazy">
             </a>
             <div class="game-card__body">
               <p class="eyebrow">1983<br>Ultimate Play the Game</p>
@@ -258,7 +258,8 @@ $tsToken = $tsNow . '.' . hash_hmac('sha256', (string)$tsNow, $tsKey);
                 <div><dt>Original</dt><dd>ZX Spectrum</dd></div>
               </dl>
               <div class="game-card__actions">
-                <a class="btn btn--primary" href="https://freejetpac.org/" rel="external">Play now</a>
+                <a class="btn btn--primary" href="https://jetpac.remake.free" rel="external">Play now</a>
+                <a class="btn btn--grey" href="https://jetpac.remake.free/about" rel="external">About</a>
               </div>
             </div>
           </article>
